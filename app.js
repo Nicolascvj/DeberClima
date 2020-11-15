@@ -31,8 +31,13 @@ const mensaje=`El temperatura de ${ciudad.magenta} es: ${datos.temperatura.toStr
         if (datos.estadoclima=='mist'){
         return(mensaje+`\nEl estado del clima es: ${datos.estadoclima}`.yellow);
         }
-        
-
+        if (datos.estadoclima=='broken clouds'){
+            return(mensaje+`\nEl estado del clima es: ${datos.estadoclima}`.gray);
+            }
+        if (datos.estadoclima=='few clouds'){
+            return(mensaje+`\nEl estado del clima es: ${datos.estadoclima}`.green);
+            }
+                
     } catch (error) {
         return(`No se encontro datos de ${ciudad}`.red);
     }
